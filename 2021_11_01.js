@@ -60,7 +60,7 @@ async function increaseEnergyLevelByFlashes(data) {
 async function increseAdjacentsEnergyLevel(data, x, y) {
     data[x][y] = 0;
     toogleBorder(data,x,y);
-    directions = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
+    directions = [[-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1], [-1, -1]]
     for (let i = 0; i < directions.length; i++) {
         const dx = directions[i][0];
         const dy = directions[i][1];
