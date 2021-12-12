@@ -1,0 +1,110 @@
+:root {
+    --one_h: #1a000a;
+    --two_h: #4d001f;
+    --three_h: #800033;
+    --four_h: #b30047;
+    --five_h: #e6005c;
+    --six_h: #ff1a75;
+    --seven_h: #ff4d94;
+    --eight_h: #ff80b3;
+    --nine_h: #ffb3d1;
+    --zero_h: #ffe6f0;
+
+    --one: invert(3%) sepia(28%) saturate(6757%) hue-rotate(315deg) brightness(99%) contrast(104%);
+    --two: invert(7%) sepia(33%) saturate(7455%) hue-rotate(319deg) brightness(104%) contrast(111%);
+    --three: invert(8%) sepia(76%) saturate(5219%) hue-rotate(326deg) brightness(92%) contrast(108%);
+    --four: invert(25%) sepia(67%) saturate(7413%) hue-rotate(323deg) brightness(66%) contrast(123%);
+    --five: invert(14%) sepia(79%) saturate(5662%) hue-rotate(328deg) brightness(87%) contrast(109%);
+    --six: invert(43%) sepia(97%) saturate(6452%) hue-rotate(323deg) brightness(99%) contrast(104%);
+    --seven: invert(40%) sepia(84%) saturate(1916%) hue-rotate(312deg) brightness(108%) contrast(101%);
+    --eight: invert(77%) sepia(18%) saturate(6545%) hue-rotate(295deg) brightness(104%) contrast(101%);
+    --nine: invert(74%) sepia(24%) saturate(624%) hue-rotate(294deg) brightness(104%) contrast(101%);
+    --ten: invert(97%) sepia(13%) saturate(1065%) hue-rotate(284deg) brightness(96%) contrast(114%);
+}
+
+body {
+    background-color: rgb(54, 54, 54);
+}
+
+h2 {
+    color: whitesmoke
+}
+
+.octoItem {
+    height: 25px;
+    width: 25px;
+}
+
+.flash {
+    animation:blinkingText 0.6s;
+}
+
+.one {
+    filter: var(--one);
+}
+
+.two {
+    filter: var(--two);
+}
+
+.three {
+    filter: var(--three);
+}
+
+.four {
+    filter: var(--four);
+}
+
+.five {
+    filter: var(--five);
+}
+
+.six {
+    filter: var(--six);
+}
+
+.seven {
+    filter: var(--seven);
+}
+
+.eight {
+    filter: var(--eight);
+}
+
+.nine {
+    filter: var(--nine);
+}
+
+.ten {
+    filter: var(--ten);
+}
+
+.current {
+    border: 1px solid whitesmoke;
+}
+
+.octoGrid {
+    display: grid; 
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px; 
+    grid-template-rows: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."
+      ". . . . . . . . . ."; 
+  }
+
+@keyframes blinkingText{
+    0%{     filter: invert(23%) sepia(89%) saturate(1879%) hue-rotate(250deg) brightness(87%) contrast(88%);  }
+    20%{    filter: invert(44%) sepia(18%) saturate(1654%) hue-rotate(207deg) brightness(96%) contrast(92%); }
+    40%{    filter: invert(92%) sepia(9%) saturate(7480%) hue-rotate(180deg) brightness(91%) contrast(100%); }
+    60%{    filter: invert(100%) sepia(78%) saturate(1396%) hue-rotate(162deg) brightness(96%) contrast(94%);  }
+    100%{ filter: var(--two)}
+}
